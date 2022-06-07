@@ -13,7 +13,7 @@ def read_root():
     return {
         'status': '200',
         'message': 'Send a request with post method to our endpoint and get your .csv file',
-        'endpoint': 'https://xlsx-csv-api.herokuapp.com//xlsx-to-csv',
+        'endpoint': 'https://xlsx-csv-api.herokuapp.com/xlsx-to-csv',
         'keys': 'file: SEND_YOUR_FILE_HERE'
     }
 
