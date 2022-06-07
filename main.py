@@ -1,10 +1,8 @@
-from typing import Union
 from fastapi import FastAPI, File, UploadFile
 from src import api
 import shutil
 from fastapi.responses import FileResponse
 import os
-from io import BytesIO
 
 
 app = FastAPI()
