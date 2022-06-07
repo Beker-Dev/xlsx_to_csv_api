@@ -12,13 +12,13 @@ app = FastAPI()
 def read_root():
     return {
         'status': '200',
-        'message': 'Send a request with post method to our endpoint and get your .csv file',
+        'message': 'Send a request with get method to our endpoint and get your .csv file',
         'endpoint': 'https://xlsx-csv-api.herokuapp.com/xlsx-to-csv',
         'keys': 'file: SEND_YOUR_FILE_HERE'
     }
 
 
-@app.post('/xlsx-to-csv/')
+@app.get('/xlsx-to-csv/')
 async def files(file: UploadFile):
     with open(file.filename, 'wb') as buffer:
         shutil.copyfileobj(file.file, buffer)
