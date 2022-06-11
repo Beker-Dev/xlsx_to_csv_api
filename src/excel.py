@@ -35,7 +35,9 @@ def csv_converter(path: str, keys: list, data: list):
         with open(path, 'w', newline='') as file:
             writer = csv.writer(
                 file,
-                delimiter=','
+                delimiter=',',
+                quotechar='"',
+                quoting=csv.QUOTE_ALL
             )
 
             writer.writerow(keys)
